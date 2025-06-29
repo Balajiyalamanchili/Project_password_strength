@@ -2,9 +2,13 @@
     margin: 0;
     padding: 0;
 }
-
+header{
+    width: 100vw;
+    text-align: center;
+    margin: 10px;
+}
 section {
-    height: 90vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,20 +45,24 @@ input {
     background-color: black;
     width: 0;
     height: 10px;
-    transition: 0.5s;
+    transition: 1s;
     border-radius: 20px;
+}
+#cases{
+    font-size: 12px;
 }
 
 #chars {
     text-align: center;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 #about{
     text-align: center;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 body{
-    background-color: black;
+    background-color: rgb(2, 2, 2);
     color: aliceblue;
+    overflow-y: hidden;
 }
