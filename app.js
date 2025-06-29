@@ -8,10 +8,10 @@ let n = document.getElementById('n')
 let chars = document.getElementById('chars')
 let about = document.getElementById('about')
 
-let [lower,upper,symbol,number] = [0,0,0,0]
+let [lower, upper, symbol, number] = [0, 0, 0, 0]
 
 inputs.addEventListener('input', event => {
- 
+
     value = inputs.value
 
     let number = ((/[0-9]/g).test(value) ? 10 : 0)
@@ -19,7 +19,7 @@ inputs.addEventListener('input', event => {
     let lower = ((/[a-z]/g).test(value) ? 10 : 0)
     let symbol = ((/[^a-z0-9A-z]/g).test(value) ? 10 : 0)
 
-    let width =0 
+    let width = 0
     let progress = number + upper + symbol + lower
 
     if (value.length >= 4) {
@@ -38,12 +38,12 @@ inputs.addEventListener('input', event => {
 
     chars.innerHTML = `Your Password has <b>${value.length}</b> chars`
 
-    n.style.color = number? 'green':'red'
-    l.style.color = lower? 'green':'red'
-    u.style.color = upper? 'green':'red'
-    s.style.color = symbol? 'green':'red'
+    n.style.color = number ? 'lime' : 'red'
+    l.style.color = lower ? 'lime' : 'red'
+    u.style.color = upper ? 'lime' : 'red'
+    s.style.color = symbol ? 'lime' : 'red'
 
-    
+
     if (width <= 50) {
         innerbar.style.backgroundColor = 'red'
         about.innerHTML = `Your password is <b>Weak`
@@ -54,7 +54,7 @@ inputs.addEventListener('input', event => {
 
     }
     else {
-        innerbar.style.backgroundColor = 'green'
+        innerbar.style.backgroundColor = 'lime'
         about.innerHTML = `Your password is <b>Strong`
 
     }
